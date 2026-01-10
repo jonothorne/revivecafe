@@ -1,0 +1,10 @@
+# robots.txt for Revive Cafe
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jonothorne.github.io/revivecafe/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
