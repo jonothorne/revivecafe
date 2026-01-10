@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" width="500" height="200">
+  <!-- Logo Circle -->
+  <circle cx="100" cy="100" r="45" fill="none" stroke="#D4A574" stroke-width="5"/>
+
+  <!-- Triangle Symbol -->
+  <path d="M 100 65 L 120 105 L 95 95 L 80 105 Z" fill="#ffffff" stroke="#ffffff" stroke-width="3" stroke-linejoin="miter"/>
+
+  <!-- REVIVE Text -->
+  <text x="160" y="115" font-family="Arial, sans-serif" font-size="70" font-weight="bold" fill="#D4A574" letter-spacing="8">REVIVE</text>
+
+  <!-- Cafe Text (script style approximation) -->
+  <text x="280" y="160" font-family="'Brush Script MT', cursive" font-size="50" fill="#ffffff" font-style="italic">Cafe</text>
+</svg>
