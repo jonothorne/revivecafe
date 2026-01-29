@@ -354,6 +354,148 @@ h2 {
     font-size: 0.95rem;
 }
 
+/* Community Impact Section */
+.impact {
+    padding: 6rem 0;
+    background-color: var(--cream);
+}
+
+.impact .section-title {
+    color: var(--primary-green);
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.impact .section-subtitle {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 1.3rem;
+    margin-bottom: 4rem;
+    font-weight: 400;
+}
+
+.impact-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.impact-text h3 {
+    color: var(--bright-gold);
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.impact-text h3:first-child {
+    margin-top: 0;
+}
+
+.impact-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.impact-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.impact-list li {
+    padding: 0.8rem 0 0.8rem 2rem;
+    position: relative;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.impact-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-orange);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.impact-callout {
+    background-color: var(--warm-beige);
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-orange);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: var(--primary-green);
+}
+
+.impact-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.stat-box {
+    background-color: var(--primary-green);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.impact-cta {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #2a5a4d 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.impact-cta h3 {
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.impact-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.impact-social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.impact-social-links .social-link {
+    background-color: var(--accent-orange);
+    color: var(--text-light);
+}
+
+.impact-social-links .social-link:hover {
+    background-color: var(--gold);
+    color: var(--primary-green);
+}
+
 /* Contact Section */
 .contact {
     padding: 6rem 0;
@@ -543,7 +685,8 @@ h2 {
     }
 
     .about-content,
-    .contact-content {
+    .contact-content,
+    .impact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -554,6 +697,16 @@ h2 {
 
     .menu-grid {
         grid-template-columns: 1fr;
+    }
+
+    .impact-stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .stat-box {
+        flex: 1;
+        min-width: 150px;
     }
 
     .section-title {
