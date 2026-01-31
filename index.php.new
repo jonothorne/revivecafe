@@ -1,0 +1,14 @@
+<?php
+// Page metadata
+$page_title = "Revive Cafe Norwich | Dog-Friendly Community Cafe near Nelson Street";
+$page_description = "Dog-friendly community cafe in Norwich near Nelson Street. Quality coffee & food at Revive Cafe, where every purchase supports local community work through Alive Church.";
+$page_keywords = "cafe norwich, dog friendly cafe norwich, community cafe norwich, nelson street cafe, alive church norwich, cafe near nelson pub, norwich social enterprise cafe, revive cafe";
+$page_url = "https://revive-cafe.co.uk/";
+$canonical_url = "https://revive-cafe.co.uk/";
+$og_title = "Revive Cafe Norwich | Dog-Friendly Community Cafe near Nelson Street";
+$og_description = "Dog-friendly social enterprise cafe in Norwich near Nelson Street. Quality coffee where 100% of proceeds support local community through Alive Church.";
+$og_image = "https://revive-cafe.co.uk/photos/revive-cafe-logo.png";
+$base_path = "";
+
+// Homepage-specific schema
+$additional_schema = '

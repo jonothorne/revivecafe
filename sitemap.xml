@@ -3,39 +3,39 @@
   <!-- Homepage -->
   <url>
     <loc>http://revive-cafe.co.uk/</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Main Sections -->
   <url>
-    <loc>http://revive-cafe.co.uk/#about</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://revive-cafe.co.uk/#menu</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>http://revive-cafe.co.uk/#faq</loc>
+    <loc>http://revive-cafe.co.uk/index.php#about</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://revive-cafe.co.uk/#impact</loc>
-    <lastmod>2026-01-10</lastmod>
+    <loc>http://revive-cafe.co.uk/index.php#menu</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>http://revive-cafe.co.uk/index.php#faq</loc>
+    <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://revive-cafe.co.uk/#contact</loc>
-    <lastmod>2026-01-10</lastmod>
+    <loc>http://revive-cafe.co.uk/index.php#impact</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://revive-cafe.co.uk/index.php#contact</loc>
+    <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -48,41 +48,41 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Blog Posts -->
+  <!-- Blog Posts - Clean URLs -->
   <url>
-    <loc>http://revive-cafe.co.uk/blog/welcome-indoor-space.html</loc>
+    <loc>http://revive-cafe.co.uk/blog/post/best-dog-friendly-cafes-norwich</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>http://revive-cafe.co.uk/blog/post/coffee-near-norwich-city-centre</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>http://revive-cafe.co.uk/blog/post/social-enterprise-cafes-norwich</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>http://revive-cafe.co.uk/blog/post/welcome-indoor-space</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://revive-cafe.co.uk/blog/2025-community-impact.html</loc>
+    <loc>http://revive-cafe.co.uk/blog/post/2025-community-impact</loc>
     <lastmod>2025-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>http://revive-cafe.co.uk/blog/dog-friendly-commitment.html</loc>
+    <loc>http://revive-cafe.co.uk/blog/post/dog-friendly-commitment</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://revive-cafe.co.uk/blog/best-dog-friendly-cafes-norwich.html</loc>
-    <lastmod>2026-01-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>http://revive-cafe.co.uk/blog/coffee-near-norwich-city-centre.html</loc>
-    <lastmod>2026-01-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>http://revive-cafe.co.uk/blog/social-enterprise-cafes-norwich.html</loc>
-    <lastmod>2026-01-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 </urlset>
