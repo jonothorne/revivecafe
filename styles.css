@@ -584,6 +584,25 @@ h2 {
     line-height: 1.4;
 }
 
+.news-content h3 a {
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.news-content h3 a:hover {
+    color: var(--accent-orange);
+}
+
+.news-content h3 a:visited {
+    color: var(--primary-green);
+}
+
+.news-content h3 a:visited:hover {
+    color: var(--accent-orange);
+}
+
 .news-content p {
     color: var(--text-dark);
     line-height: 1.7;
