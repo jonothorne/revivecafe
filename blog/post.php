@@ -8,10 +8,11 @@ if (empty($slug)) {
 }
 
 // Load posts data
-$postsFile = '../blog-data/posts.json';
+// Use absolute path to handle both direct access and router includes
+$postsFile = __DIR__ . '/../blog-data/posts.json';
 if (!file_exists($postsFile)) {
     header('HTTP/1.0 404 Not Found');
-    echo "Posts data not found";
+    echo "Posts data not found at: " . $postsFile;
     exit;
 }
 
@@ -38,10 +39,10 @@ if (!$post) {
 }
 
 // Check if HTML file exists
-$htmlFile = $slug . '.html';
+$htmlFile = __DIR__ . '/' . $slug . '.html';
 if (!file_exists($htmlFile)) {
     header('HTTP/1.0 404 Not Found');
-    echo "Post content not found";
+    echo "Post content not found at: " . $htmlFile;
     exit;
 }
 
@@ -109,16 +110,16 @@ $additional_schema = '
 ';
 
 // Include header
-include '../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 </head>
 <body>
-<?php include '../includes/nav.php'; ?>
+<?php include __DIR__ . '/../includes/nav.php'; ?>
 
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <div class="container">
-            <a href="../index.php">Home</a> / <a href="../blog/">Blog</a> / <span><?php echo htmlspecialchars($post['title']); ?></span>
+            <a href="<?php echo $base_path; ?>index.php">Home</a> / <a href="<?php echo $base_path; ?>blog/">Blog</a> / <span><?php echo htmlspecialchars($post['title']); ?></span>
         </div>
     </div>
 
@@ -131,10 +132,19 @@ include '../includes/header.php';
     // Extract the article section
     preg_match('/<article class="blog-post">(.*?)<\/article>/s', $html, $matches);
     if (isset($matches[1])) {
-        echo '<article class="blog-post">' . $matches[1] . '</article>';
+        $content = $matches[1];
+
+        // Fix image and link paths for the dynamic URL structure
+        // Replace ../photos/ with ../../photos/ (since we're at /blog/post/slug)
+        $content = str_replace('src="../photos/', 'src="../../photos/', $content);
+
+        // Fix links to index.html to point to index.php
+        $content = str_replace('href="../index.html', 'href="../../index.php', $content);
+
+        echo '<article class="blog-post">' . $content . '</article>';
     } else {
         echo '<p>Error loading post content</p>';
     }
     ?>
 
-<?php include '../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

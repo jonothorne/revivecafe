@@ -1,6 +1,6 @@
 <?php
 // Load posts data
-$postsFile = '../blog-data/posts.json';
+$postsFile = __DIR__ . '/../blog-data/posts.json';
 $posts = json_decode(file_get_contents($postsFile), true);
 
 // Sort by date (newest first)
@@ -61,16 +61,16 @@ $additional_schema = '
 ';
 
 // Include header
-include '../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 </head>
 <body>
-<?php include '../includes/nav.php'; ?>
+<?php include __DIR__ . '/../includes/nav.php'; ?>
 
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <div class="container">
-            <a href="../index.php">Home</a> / <span>Blog</span>
+            <a href="<?php echo $base_path; ?>index.php">Home</a> / <span>Blog</span>
         </div>
     </div>
 
@@ -120,7 +120,7 @@ include '../includes/header.php';
         </div>
     </section>
 
-<?php include '../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>
 
     <script>
         // Blog category filtering

@@ -11,14 +11,14 @@ $og_image = "https://revive-cafe.co.uk/photos/revive-cafe-logo.png";
 $base_path = "";
 
 // Include header
-include 'includes/header.php';
+include __DIR__ . '/includes/header.php';
 
 // Include homepage schema
-include 'includes/home-schema.php';
+include __DIR__ . '/includes/home-schema.php';
 ?>
 </head>
 <body>
-<?php include 'includes/nav.php'; ?>
+<?php include __DIR__ . '/includes/nav.php'; ?>
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
@@ -403,4 +403,4 @@ include 'includes/home-schema.php';
     </section>
 
 
-<?php include 'includes/footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>
