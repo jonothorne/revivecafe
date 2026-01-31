@@ -143,9 +143,6 @@ a:active {
     height: 90vh;
     min-height: 600px;
     background: linear-gradient(135deg, var(--primary-green) 0%, #2a5a4d 100%);
-    background-image:
-        url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="coffee-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(243,235,210,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23coffee-pattern)"/></svg>'),
-        linear-gradient(135deg, var(--primary-green) 0%, #2a5a4d 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,7 +207,7 @@ a:active {
 .btn {
     display: inline-block;
     padding: 1rem 2.5rem;
-    text-decoration: none;
+    text-decoration: none !important;
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -221,15 +218,27 @@ a:active {
 
 .btn-primary {
     background-color: var(--accent-orange);
-    color: var(--text-light);
+    color: var(--text-light) !important;
     font-weight: 700;
 }
 
 .btn-primary:hover {
     background-color: var(--gold);
-    color: var(--primary-green);
+    color: var(--primary-green) !important;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn-primary:visited {
+    color: var(--text-light) !important;
+}
+
+.btn-primary:visited:hover {
+    color: var(--primary-green) !important;
+}
+
+.btn-primary:active {
+    color: var(--text-light) !important;
 }
 
 /* About Section */
@@ -537,12 +546,20 @@ a:active {
 
 .impact-social-links .social-link {
     background-color: var(--accent-orange);
-    color: var(--text-light);
+    color: var(--text-light) !important;
 }
 
 .impact-social-links .social-link:hover {
     background-color: var(--gold);
-    color: var(--primary-green);
+    color: var(--primary-green) !important;
+}
+
+.impact-social-links .social-link:visited {
+    color: var(--text-light) !important;
+}
+
+.impact-social-links .social-link:visited:hover {
+    color: var(--primary-green) !important;
 }
 
 /* News Section */
@@ -891,8 +908,8 @@ a:active {
     display: inline-block;
     padding: 0.7rem 1.5rem;
     background-color: var(--primary-green);
-    color: var(--gold);
-    text-decoration: none;
+    color: var(--gold) !important;
+    text-decoration: none !important;
     border-radius: 25px;
     transition: all 0.3s ease;
     font-weight: 600;
@@ -900,8 +917,16 @@ a:active {
 
 .social-link:hover {
     background-color: var(--accent-orange);
-    color: var(--text-light);
+    color: var(--text-light) !important;
     transform: translateY(-2px);
+}
+
+.social-link:visited {
+    color: var(--gold) !important;
+}
+
+.social-link:visited:hover {
+    color: var(--text-light) !important;
 }
 
 /* Contact Form */
