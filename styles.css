@@ -38,6 +38,25 @@ h2 {
     line-height: 2.5rem;
 }
 
+/* Global Link Styles */
+a {
+    color: var(--accent-orange);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-green);
+}
+
+a:visited {
+    color: var(--accent-orange);
+}
+
+a:visited:hover {
+    color: var(--primary-green);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
