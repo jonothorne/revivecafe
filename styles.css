@@ -393,8 +393,9 @@ a:active {
 
 /* Community Impact Section */
 .impact {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background-color: var(--cream);
+    overflow-x: hidden;
 }
 
 .impact .section-title {
@@ -402,14 +403,16 @@ a:active {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 1rem;
+    word-wrap: break-word;
 }
 
 .impact .section-subtitle {
     text-align: center;
     color: var(--text-dark);
     font-size: 1.3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     font-weight: 400;
+    word-wrap: break-word;
 }
 
 .impact-content {
@@ -417,12 +420,21 @@ a:active {
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     margin-bottom: 4rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.impact-text {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .impact-text h3 {
     color: var(--bright-gold);
     font-size: 1.8rem;
     margin: 2rem 0 1rem 0;
+    word-wrap: break-word;
 }
 
 .impact-text h3:first-child {
@@ -1043,14 +1055,45 @@ a:active {
         font-size: 1.05rem;
     }
 
+    .impact {
+        padding: 3rem 0;
+    }
+
+    .impact .section-title {
+        font-size: 2.2rem;
+    }
+
+    .impact .section-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .impact-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .impact-text p {
+        font-size: 1rem;
+    }
+
+    .impact-list li {
+        font-size: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .impact-callout {
+        font-size: 1.1rem;
+        padding: 1.2rem;
+    }
+
     .impact-stats {
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .stat-box {
-        flex: 1;
-        min-width: 150px;
+        width: 100%;
+        padding: 1.5rem;
     }
 
     .section-title {
@@ -1099,6 +1142,43 @@ a:active {
         gap: 2rem;
     }
 
+    .impact {
+        padding: 2rem 0;
+    }
+
+    .impact .section-title {
+        font-size: 1.8rem;
+        padding: 0 0.5rem;
+    }
+
+    .impact .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .impact-content {
+        gap: 2rem;
+    }
+
+    .impact-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .impact-text p {
+        font-size: 0.95rem;
+    }
+
+    .impact-list li {
+        font-size: 0.9rem;
+        padding-left: 1.2rem;
+    }
+
+    .impact-callout {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
     .impact-stats {
         flex-direction: column;
         gap: 1.5rem;
@@ -1106,6 +1186,23 @@ a:active {
 
     .stat-box {
         min-width: 100%;
+        padding: 1.2rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .impact-cta {
+        padding: 2rem 1rem;
+    }
+
+    .impact-cta h3 {
+        font-size: 1.5rem;
+    }
+
+    .impact-cta p {
+        font-size: 1rem;
     }
 
     .btn {
