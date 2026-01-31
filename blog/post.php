@@ -54,7 +54,7 @@ $canonical_url = "https://revive-cafe.co.uk/blog/post/" . $post['slug'];
 $og_title = $post['title'];
 $og_description = $post['meta_description'];
 $og_image = "https://revive-cafe.co.uk/photos/" . $post['featured_image'];
-$base_path = "../";
+$base_path = "../../"; // /blog/post/slug is 3 levels deep, need ../../ to get to root
 
 // Article Schema
 $additional_schema = '
