@@ -320,13 +320,20 @@ a:active {
     color: var(--text-dark);
 }
 
+.about-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 100%;
+}
+
 .about-image {
     position: relative;
 }
 
 .about-image img {
     width: 100%;
-    height: 500px;
+    height: 350px;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -359,6 +366,49 @@ a:active {
     margin-bottom: 4rem;
     font-style: italic;
     color: var(--cream);
+}
+
+.menu-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    max-width: 100%;
+}
+
+.menu-showcase-item {
+    text-align: center;
+    background-color: rgba(243, 235, 210, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(243, 235, 210, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-showcase-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.menu-showcase-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.menu-showcase-item h3 {
+    font-size: 1.5rem;
+    color: var(--warm-beige);
+    margin-bottom: 0.5rem;
+}
+
+.menu-showcase-item p {
+    color: var(--cream);
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
 .menu-grid {
@@ -1072,6 +1122,20 @@ a:active {
         grid-template-columns: 1fr;
     }
 
+    .menu-showcase {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .menu-showcase-item img {
+        height: 200px;
+    }
+
+    .about-image img {
+        height: 250px;
+    }
+
     .news-grid {
         grid-template-columns: 1fr;
     }
@@ -1169,6 +1233,18 @@ a:active {
 
     .news-grid {
         gap: 2rem;
+    }
+
+    .menu-showcase-item img {
+        height: 180px;
+    }
+
+    .menu-showcase-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-image img {
+        height: 200px;
     }
 
     .impact {
