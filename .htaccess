@@ -2,12 +2,10 @@
 RewriteEngine On
 RewriteBase /
 
-# Force HTTPS (works with various hosting setups)
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP:X-Forwarded-Proto} !https [OR]
-RewriteCond %{HTTP:X-Forwarded-SSL} !on
+# Force HTTPS (simple version that works on most hosts)
+RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP_HOST} revive-cafe\.co\.uk [NC]
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+RewriteRule ^(.*)$ https://revive-cafe.co.uk/$1 [L,R=301]
 
 # Force non-www (redirect www to non-www)
 RewriteCond %{HTTP_HOST} ^www\.revive-cafe\.co\.uk [NC]
