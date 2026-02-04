@@ -70,7 +70,7 @@ include __DIR__ . '/../includes/header.php';
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <div class="container">
-            <a href="<?php echo $base_path; ?>index.php">Home</a> / <span>Blog</span>
+            <a href="<?php echo $base_path; ?>">Home</a> / <span>Blog</span>
         </div>
     </div>
 

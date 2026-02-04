@@ -23,7 +23,7 @@ if ($uri === '/' || $uri === '') {
     return true;
 }
 
-// Remove .php extension
+// Handle .php extension if directly accessed
 if (preg_match('/\.php$/', $uri)) {
     $file = __DIR__ . $uri;
     if (file_exists($file)) {
@@ -32,11 +32,20 @@ if (preg_match('/\.php$/', $uri)) {
     }
 }
 
+// Handle extensionless URLs by checking for .php file
+$phpFile = __DIR__ . $uri . '.php';
+if (file_exists($phpFile) && !is_dir(__DIR__ . $uri)) {
+    require $phpFile;
+    return true;
+}
+
 // Check if file exists (CSS, JS, images, etc.)
 $file = __DIR__ . $uri;
 if (file_exists($file) && !is_dir($file)) {
     return false; // Let PHP serve the file normally
 }
 
-// Default: let PHP handle it
-return false;
+// 404 - Page not found
+http_response_code(404);
+require '404.php';
+return true;

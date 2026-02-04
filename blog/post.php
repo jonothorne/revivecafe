@@ -11,15 +11,13 @@ if (empty($slug)) {
 // Use absolute path to handle both direct access and router includes
 $postsFile = __DIR__ . '/../blog-data/posts.json';
 if (!file_exists($postsFile)) {
-    header('HTTP/1.0 404 Not Found');
-    echo "Posts data not found at: " . $postsFile;
+    header('Location: /404.php');
     exit;
 }
 
 $posts = json_decode(file_get_contents($postsFile), true);
 if (!$posts) {
-    header('HTTP/1.0 500 Internal Server Error');
-    echo "Error loading posts";
+    header('Location: /404.php');
     exit;
 }
 
@@ -33,16 +31,14 @@ foreach ($posts as $p) {
 }
 
 if (!$post) {
-    header('HTTP/1.0 404 Not Found');
-    echo "Post not found";
+    header('Location: /404.php');
     exit;
 }
 
 // Check if HTML file exists
 $htmlFile = __DIR__ . '/' . $slug . '.html';
 if (!file_exists($htmlFile)) {
-    header('HTTP/1.0 404 Not Found');
-    echo "Post content not found at: " . $htmlFile;
+    header('Location: /404.php');
     exit;
 }
 
@@ -55,7 +51,7 @@ $canonical_url = "https://revive-cafe.co.uk/blog/post/" . $post['slug'];
 $og_title = $post['title'];
 $og_description = $post['meta_description'];
 $og_image = "https://revive-cafe.co.uk/photos/" . $post['featured_image'];
-$base_path = "../../"; // /blog/post/slug is 3 levels deep, need ../../ to get to root
+$base_path = "../../"; // URL /blog/post/slug needs ../../ to reach root
 
 // Article Schema
 $additional_schema = '
@@ -119,7 +115,7 @@ include __DIR__ . '/../includes/header.php';
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <div class="container">
-            <a href="<?php echo $base_path; ?>index.php">Home</a> / <a href="<?php echo $base_path; ?>blog/">Blog</a> / <span><?php echo htmlspecialchars($post['title']); ?></span>
+            <a href="<?php echo $base_path; ?>">Home</a> / <a href="<?php echo $base_path; ?>blog/">Blog</a> / <span><?php echo htmlspecialchars($post['title']); ?></span>
         </div>
     </div>
 
@@ -134,16 +130,17 @@ include __DIR__ . '/../includes/header.php';
     if (isset($matches[1])) {
         $content = $matches[1];
 
-        // Fix image and link paths for the dynamic URL structure
-        // Replace ../photos/ with ../../photos/ (since we're at /blog/post/slug)
+        // Fix image and link paths for the URL structure /blog/post/slug
+        // Images use ../photos/ but need ../../photos/ for the 3-level URL
         $content = str_replace('src="../photos/', 'src="../../photos/', $content);
 
-        // Fix links to index.html to point to index.php
-        $content = str_replace('href="../index.html', 'href="../../index.php', $content);
+        // Fix links to index.html to point to root
+        $content = str_replace('href="../index.html', 'href="../../', $content);
 
         echo '<article class="blog-post">' . $content . '</article>';
     } else {
-        echo '<p>Error loading post content</p>';
+        header('Location: /404.php');
+        exit;
     }
     ?>
 

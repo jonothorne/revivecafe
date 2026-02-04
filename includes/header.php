@@ -26,7 +26,13 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="<?php echo isset($canonical_url) ? $canonical_url : 'https://revive-cafe.co.uk/'; ?>">
 
-    <link rel="stylesheet" href="<?php echo isset($base_path) ? $base_path : ''; ?>styles.css">
+    <?php
+    // Cache-busting for CSS - use file modification time
+    $cssPath = isset($base_path) ? $base_path : '';
+    $cssFile = __DIR__ . '/../styles.css';
+    $cssVersion = file_exists($cssFile) ? '?v=' . filemtime($cssFile) : '';
+    ?>
+    <link rel="stylesheet" href="<?php echo $cssPath; ?>styles.css<?php echo $cssVersion; ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">

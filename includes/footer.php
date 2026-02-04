@@ -6,6 +6,12 @@
         </div>
     </footer>
 
-    <script src="<?php echo isset($base_path) ? $base_path : ''; ?>script.js"></script>
+    <?php
+    // Cache-busting for JS - use file modification time
+    $jsPath = isset($base_path) ? $base_path : '';
+    $jsFile = __DIR__ . '/../script.js';
+    $jsVersion = file_exists($jsFile) ? '?v=' . filemtime($jsFile) : '';
+    ?>
+    <script src="<?php echo $jsPath; ?>script.js<?php echo $jsVersion; ?>"></script>
 </body>
 </html>

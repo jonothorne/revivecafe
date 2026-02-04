@@ -68,6 +68,6 @@ Options -Indexes
     ExpiresByType application/pdf "access plus 1 month"
 </IfModule>
 
-# Error pages (optional - create these files if you want custom error pages)
-# ErrorDocument 404 /404.php
+# Error pages
+ErrorDocument 404 /404.php
 # ErrorDocument 500 /500.php
