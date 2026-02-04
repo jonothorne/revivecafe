@@ -4,6 +4,9 @@
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
+// Admin routes: /admin/* -> /admin/*.php
+// Handled automatically by the .php and extensionless URL logic below
+
 // Blog post URLs: /blog/post/slug-name -> /blog/post.php?slug=slug-name
 if (preg_match('#^/blog/post/([a-z0-9-]+)/?$#', $uri, $matches)) {
     $_GET['slug'] = $matches[1];
