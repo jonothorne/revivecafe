@@ -5,7 +5,7 @@ Allow: /
 Allow: /blog/
 
 # Sitemap
-Sitemap: http://revive-cafe.co.uk/sitemap.xml
+Sitemap: https://revive-cafe.co.uk/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
