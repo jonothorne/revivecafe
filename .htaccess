@@ -2,9 +2,13 @@
 RewriteEngine On
 RewriteBase /
 
-# Force www (optional - uncomment if you want www)
-# RewriteCond %{HTTP_HOST} ^revive-cafe\.co\.uk [NC]
-# RewriteRule ^(.*)$ https://www.revive-cafe.co.uk/$1 [L,R=301]
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Force non-www (redirect www to non-www)
+RewriteCond %{HTTP_HOST} ^www\.revive-cafe\.co\.uk [NC]
+RewriteRule ^(.*)$ https://revive-cafe.co.uk/$1 [L,R=301]
 
 # Remove trailing slashes from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
