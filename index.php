@@ -7,7 +7,7 @@ $page_url = "https://revive-cafe.co.uk/";
 $canonical_url = "https://revive-cafe.co.uk/";
 $og_title = "Revive Cafe Norwich | Dog-Friendly Community Cafe near Nelson Street";
 $og_description = "Dog-friendly social enterprise cafe in Norwich near Nelson Street. Quality coffee where 100% of proceeds support local community through Alive Church.";
-$og_image = "https://revive-cafe.co.uk/photos/revive-cafe-logo.png";
+$og_image = "https://revive-cafe.co.uk/photos/revive-community-cafe-norwich.jpg";
 $base_path = "";
 
 // Include header
