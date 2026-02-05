@@ -17,7 +17,7 @@ if (!defined('ADMIN_ACCESS')) {
 
 return [
     'username' => 'admin',
-    // Default password: "admin123" - CHANGE THIS!
-    'password_hash' => '$2y$10$XpFO7W7h9GQ6Gg3G9LZ7g.WZYQqV7tVxMOz7wPJV4d7HQ9B8VxW/e',
+    // Password: "ReviveCafe2026!"
+    'password_hash' => '$2y$10$qcGslad3DUhlEkaSkf/jRetc/tBvj4mjWoz0FF/oio7cFleToNGnC',
     'session_timeout' => 3600, // 1 hour in seconds
 ];

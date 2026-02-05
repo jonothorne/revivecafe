@@ -35,7 +35,6 @@ Temporary Items
 # Temporary files
 *.tmp
 
-# Admin credentials and sensitive data
-/blog-data/admin-credentials.php
+# Admin sensitive data
 /blog-data/admin-errors.log
 /blog-data/backups/
