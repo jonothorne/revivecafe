@@ -18,6 +18,6 @@ if (!defined('ADMIN_ACCESS')) {
 return [
     'username' => 'admin',
     // Password: "ReviveCafe2026!"
-    'password_hash' => '$2y$10$qcGslad3DUhlEkaSkf/jRetc/tBvj4mjWoz0FF/oio7cFleToNGnC',
+    'password_hash' => '$2y$10$7BKv/GcD8shi128pqre5Xu/QWgMV9nXQ2upIwDso2VLgN9CdW78Ze',
     'session_timeout' => 3600, // 1 hour in seconds
 ];
