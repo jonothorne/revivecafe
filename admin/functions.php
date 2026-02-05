@@ -215,6 +215,7 @@ function generatePostHtml($post, $content) {
     $featuredImage = htmlspecialchars($post['featured_image'], ENT_QUOTES, 'UTF-8');
     $excerpt = htmlspecialchars($post['excerpt'], ENT_QUOTES, 'UTF-8');
     $date = date('F j, Y', strtotime($post['date']));
+    $year = date('Y', strtotime($post['date']));
 
     $html = <<<HTML
 <!DOCTYPE html>
@@ -328,7 +329,7 @@ function generatePostHtml($post, $content) {
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; {$post['date']|date:'Y'} Revive Cafe. All rights reserved.</p>
+            <p>&copy; {$year} Revive Cafe. All rights reserved.</p>
             <p class="footer-tagline">Brewing community, one cup at a time.</p>
         </div>
     </footer>

@@ -51,7 +51,7 @@ function isAdminAuthenticated() {
 // Require authentication (redirect to login if not authenticated)
 function requireAuth() {
     if (!isAdminAuthenticated()) {
-        header('Location: login.php');
+        header('Location: /admin/login.php');
         exit;
     }
 }

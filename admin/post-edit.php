@@ -117,8 +117,7 @@ $success = getFlashMessage('success');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Post | Revive Cafe Admin</title>
-    <link rel="stylesheet" href="admin-styles.css">
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/zbn1o8ubtp4yqdd26kaezc0r0hhkbs9mekfugp335tofjnjn/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <style>
         * {
             margin: 0;
@@ -416,7 +415,7 @@ $success = getFlashMessage('success');
                             required
                             value="<?php echo htmlspecialchars($formData['slug']); ?>"
                             placeholder="auto-generated-from-title"
-                            pattern="[a-z0-9-]+"
+                            pattern="[a-z0-9\-]+"
                         >
                         <small>Changing slug will break existing links!</small>
                     </div>
@@ -523,7 +522,6 @@ $success = getFlashMessage('success');
                     <textarea
                         id="content"
                         name="content"
-                        required
                     ><?php echo htmlspecialchars($formData['content']); ?></textarea>
                     <small>Edit your blog post content using the editor above</small>
                 </div>
@@ -572,6 +570,7 @@ $success = getFlashMessage('success');
     <script>
         // Initialize TinyMCE
         tinymce.init({
+            apiKey: 'zbn1o8ubtp4yqdd26kaezc0r0hhkbs9mekfugp335tofjnjn',
             selector: '#content',
             height: 500,
             menubar: false,
@@ -631,6 +630,11 @@ $success = getFlashMessage('success');
 
         updateCharCounter('excerpt', 'excerpt-count');
         updateCharCounter('meta_description', 'meta-count');
+
+        // Sync TinyMCE content before form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            tinymce.triggerSave();
+        });
     </script>
 </body>
 </html>

@@ -4,8 +4,21 @@
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-// Admin routes: /admin/* -> /admin/*.php
-// Handled automatically by the .php and extensionless URL logic below
+// Admin routes
+// /admin or /admin/ -> /admin/index.php
+if ($uri === '/admin' || $uri === '/admin/') {
+    require 'admin/index.php';
+    return true;
+}
+
+// /admin/anything -> /admin/anything.php
+if (preg_match('#^/admin/([a-z0-9-]+)$#', $uri, $matches)) {
+    $adminFile = __DIR__ . '/admin/' . $matches[1] . '.php';
+    if (file_exists($adminFile)) {
+        require $adminFile;
+        return true;
+    }
+}
 
 // Blog post URLs: /blog/post/slug-name -> /blog/post.php?slug=slug-name
 if (preg_match('#^/blog/post/([a-z0-9-]+)/?$#', $uri, $matches)) {
